@@ -1,0 +1,24 @@
+<suite name="Selenium Grid" verbose="3" parallel="false" thread-count="3">
+  	
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>
+    
+ 	<test name="Page Object Pattern Tests - add datas" order-by-instances="true" preserve-order="true" enabled="true">
+        <classes>
+            <class name="pop.selenium.FirstTest" />
+        </classes>
+    </test>
+ 	<test name="Page Object Pattern Tests - clear datas" preserve-order="true" enabled="false">
+        <classes>
+            <class name="pop.selenium.ClearTest" />
+        </classes>
+    </test>
+ 	<test name="Page Object Pattern Google Example" preserve-order="true" enabled="false">
+        <packages>
+            <package name="pop.selenium.example"/>
+        </packages>
+    </test>
+ 	
+</suite>
